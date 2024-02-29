@@ -13,7 +13,10 @@ namespace ET
             zoneScene.AddComponent<RedDotComponent>();
             zoneScene.AddComponent<ResourcesLoaderComponent>();
         
-            zoneScene.GetComponent<UIComponent>().ShowWindow(WindowID.WindowID_Login);
+            
+            //zoneScene.GetComponent<UIComponent>().ShowWindow(WindowID.WindowID_Test);
+            UIComponent uiComponent = zoneScene.GetComponent<UIComponent>();
+            uiComponent.ShowWindow(WindowID.WindowID_TapToStart);
 
             zoneScene.AddComponent<CarsComponent>();
 

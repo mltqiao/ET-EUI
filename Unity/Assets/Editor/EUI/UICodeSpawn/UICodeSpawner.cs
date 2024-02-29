@@ -623,7 +623,6 @@ public partial class UICodeSpawner
         WidgetInterfaceList = new List<string>();        
         WidgetInterfaceList.Add("Button");
         WidgetInterfaceList.Add( "Text");
-        WidgetInterfaceList.Add("TMPro.TextMeshProUGUI");
         WidgetInterfaceList.Add("Input");
         WidgetInterfaceList.Add("InputField");
         WidgetInterfaceList.Add( "Scrollbar");
@@ -639,6 +638,8 @@ public partial class UICodeSpawner
         WidgetInterfaceList.Add("LoopVerticalScrollRect");
         WidgetInterfaceList.Add("LoopHorizontalScrollRect");
         WidgetInterfaceList.Add("UnityEngine.EventSystems.EventTrigger");
+        WidgetInterfaceList.Add("TMPro.TextMeshProUGUI");
+        WidgetInterfaceList.Add("TMPro.TMP_InputField");
     }
 
     private static Dictionary<string, List<Component> > Path2WidgetCachedDict =null;
