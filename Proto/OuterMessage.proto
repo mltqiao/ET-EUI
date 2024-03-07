@@ -246,4 +246,154 @@ message C2R_SayHello // IMessage
 	repeated int64 Keys = 3;
 	repeated string Values = 4;
 }
- 
+
+//ResponseType R2C_AccountLogin
+message C2R_AccountLogin // IRequest
+{
+	int32 RpcId = 90;
+	
+	string Account = 1;
+	string Password = 2;
+	int32 LoginWay = 3;
+}
+
+message R2C_AccountLogin // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+}
+
+message ServerListInfo
+{
+	int32 Zone = 1;
+	string Name = 2;
+	int32 Status = 3;
+}
+
+//ResponseType R2C_GetServerList
+message C2R_GetServerList // IRequest
+{
+	int32 RpcId = 90;
+}
+
+message R2C_GetServerList // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+	
+	repeated ServerListInfo ServerListInfos = 1;
+}
+
+//ResponseType R2C_LoginZone
+message C2R_LoginZone // IRequest
+{
+	int32 RpcId = 90;
+	
+	int32 Zone = 1;
+}
+
+message R2C_LoginZone // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+	
+	string GateAddress = 1;
+	int64 GateKey = 2;
+}
+
+//ResponseType G2C_Login2Gate
+message C2G_Login2Gate // IRequest
+{
+	int32 RpcId = 90;
+	
+	int64 GateKey = 1;
+}
+
+message G2C_Login2Gate // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+}
+
+message A2C_Disconnect // IMessage
+{
+	int32 Error = 1;
+}
+
+message GateRoleInfo
+{
+	int64 UnitId = 1;
+	string Name = 2;
+	int32 Level = 3;
+}
+
+//ResponseType G2C_GetRoles
+message C2G_GetRoles // IRequest
+{
+	int32 RpcId = 90;
+}
+
+message G2C_GetRoles // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+	
+	repeated GateRoleInfo Roles = 1;
+}
+
+//ResponseType G2C_CreateRole
+message C2G_CreateRole // IRequest
+{
+	int32 RpcId = 90;
+	string Name = 1;
+}
+
+message G2C_CreateRole // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+
+	GateRoleInfo Role = 1;
+}
+
+//ResponseType G2C_DeleteRole
+message C2G_DeleteRole // IRequest
+{
+	int32 RpcId = 90;
+	
+	int64 RoleId = 1;
+}
+
+message G2C_DeleteRole // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+	
+	int64 RoleId = 1;
+}
+
+//ResponseType G2C_Enter2Map
+message C2G_Enter2Map // IRequest
+{
+	int32 RpcId = 90;
+	
+	int64 UnitId = 1;
+}
+
+message G2C_Enter2Map // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+	
+	bool InQueue = 1; //是否需要排队
+	int32 Count = 2; //排队总人数
+	int32 Index = 3; //排到第几位
+}

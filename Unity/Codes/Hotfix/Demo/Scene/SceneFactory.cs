@@ -13,22 +13,10 @@ namespace ET
 			zoneScene.AddComponent<CurrentScenesComponent>();
             zoneScene.AddComponent<ObjectWait>();
             zoneScene.AddComponent<PlayerComponent>();
+            zoneScene.AddComponent<ServerInfosComponent>();
+            zoneScene.AddComponent<RoleInfosComponent>();
             
             Game.EventSystem.Publish(new EventType.AfterCreateZoneScene() {ZoneScene = zoneScene});
-            
-            
-            // Log.Debug("Before TestEvent Publish");
-            Game.EventSystem.Publish(new EventType.TestEvent() {ZoneScene = zoneScene});
-            // Log.Debug("After TestEvent Publish");
-            
-            // Log.Debug("Before TestEventAsync Publish");
-            //Game.EventSystem.PublishAsync(new EventType.TestEventAsync() {ZoneScene = zoneScene}).Coroutine();
-            // Log.Debug("After TestEventAsync Publish");
-
-            Log.Debug("Before TestEventClass Publish");
-            TestEventClass.Instance.ZoneScene = zoneScene;
-            Game.EventSystem.PublishClass(TestEventClass.Instance);
-            Log.Debug("After TestEventClass Publish");
             
             return zoneScene;
         }

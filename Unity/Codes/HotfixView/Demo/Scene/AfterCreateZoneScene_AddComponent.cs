@@ -16,7 +16,7 @@ namespace ET
             
             //zoneScene.GetComponent<UIComponent>().ShowWindow(WindowID.WindowID_Test);
             UIComponent uiComponent = zoneScene.GetComponent<UIComponent>();
-            uiComponent.ShowWindow(WindowID.WindowID_TapToStart);
+            uiComponent.ShowWindow(WindowID.WindowID_AccountLogin);
 
             zoneScene.AddComponent<CarsComponent>();
 

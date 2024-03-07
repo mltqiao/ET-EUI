@@ -41,16 +41,28 @@ namespace ET
 			try
 			{
 				await LoginHelper.Login(self.ZoneScene(), address, account, password);
+				int errorCode = await LoginHelper.Login(self.ZoneScene(), address, account, password);
+
+				if (errorCode != ErrorCode.ERR_Success)
+				{
+					return;
+				}
 				
 				PlayerPrefs.SetString("Account",account);
 				PlayerPrefs.SetString("Password",password);
+				
+				errorCode = await LoginHelper.GetServerList(self.ZoneScene());
+				if (errorCode != ErrorCode.ERR_Success)
+				{
+					return;
+				}
+				self.ZoneScene().GetComponent<UIComponent>().ShowWindow(WindowID.WindowID_ServerInfo);
 			}
 			catch (Exception e)
 			{
 				Log.Error(e.ToString());
 				throw;
 			}
-			self.ZoneScene().GetComponent<UIComponent>().CloseWindow(WindowID.WindowID_AccountLogin);
 			await ETTask.CompletedTask;
 		}
 

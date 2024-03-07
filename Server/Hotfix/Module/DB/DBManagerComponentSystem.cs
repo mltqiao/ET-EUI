@@ -41,5 +41,10 @@ namespace ET
             self.DBComponents[zone] = dbComponent;
             return dbComponent;
         }
+
+        public static DBComponent GetDirectDB(this Entity self)
+        {
+            return DBManagerComponent.Instance.GetZoneDB(self.DomainZone());
+        }
     }
 }

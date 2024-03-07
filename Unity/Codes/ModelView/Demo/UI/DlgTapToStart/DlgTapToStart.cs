@@ -6,7 +6,5 @@
 
 		public DlgTapToStartViewComponent View { get => this.Parent.GetComponent<DlgTapToStartViewComponent>();} 
 
-		 
-
 	}
 }

@@ -32,6 +32,7 @@ namespace ET
                     scene.AddComponent<NetKcpComponent, IPEndPoint, int>(startSceneConfig.OuterIPPort, SessionStreamDispatcherType.SessionStreamDispatcherServerOuter);
                     scene.AddComponent<PlayerComponent>();
                     scene.AddComponent<GateSessionKeyComponent>();
+                    scene.AddComponent<GateUserMgrComponent>();
                     break;
                 case SceneType.Map:
                     scene.AddComponent<UnitComponent>();
@@ -39,6 +40,9 @@ namespace ET
                     break;
                 case SceneType.Location:
                     scene.AddComponent<LocationComponent>();
+                    break;
+                case SceneType.Name:
+                    scene.AddComponent<TempComponent>();
                     break;
             }
 

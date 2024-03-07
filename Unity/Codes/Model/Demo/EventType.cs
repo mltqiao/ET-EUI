@@ -132,5 +132,12 @@ namespace ET
                 this.ZoneScene = null;
             }
         }
+
+        public struct UpdateQueueInfo
+        {
+            public Scene ZoneScene;
+            public int Count;
+            public int Index;
+        }
     }
 }

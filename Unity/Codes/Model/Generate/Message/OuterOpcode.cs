@@ -33,5 +33,24 @@ namespace ET
 		 public const ushort C2M_TransferMap = 10030;
 		 public const ushort M2C_TransferMap = 10031;
 		 public const ushort C2R_SayHello = 10032;
+		 public const ushort C2R_AccountLogin = 10033;
+		 public const ushort R2C_AccountLogin = 10034;
+		 public const ushort ServerListInfo = 10035;
+		 public const ushort C2R_GetServerList = 10036;
+		 public const ushort R2C_GetServerList = 10037;
+		 public const ushort C2R_LoginZone = 10038;
+		 public const ushort R2C_LoginZone = 10039;
+		 public const ushort C2G_Login2Gate = 10040;
+		 public const ushort G2C_Login2Gate = 10041;
+		 public const ushort A2C_Disconnect = 10042;
+		 public const ushort GateRoleInfo = 10043;
+		 public const ushort C2G_GetRoles = 10044;
+		 public const ushort G2C_GetRoles = 10045;
+		 public const ushort C2G_CreateRole = 10046;
+		 public const ushort G2C_CreateRole = 10047;
+		 public const ushort C2G_DeleteRole = 10048;
+		 public const ushort G2C_DeleteRole = 10049;
+		 public const ushort C2G_Enter2Map = 10050;
+		 public const ushort G2C_Enter2Map = 10051;
 	}
 }
