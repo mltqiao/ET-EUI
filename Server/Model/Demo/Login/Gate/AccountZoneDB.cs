@@ -6,5 +6,6 @@
     {
         public string Account;
         public int LoginZoneId;
+        public long LastRoleId;
     }
 }

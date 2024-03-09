@@ -28,5 +28,7 @@ namespace ET
 		 public const ushort G2R_GetGateKey = 20025;
 		 public const ushort G2Name_CheckName = 20026;
 		 public const ushort Name2G_CheckName = 20027;
+		 public const ushort G2Queue_Enqueue = 20028;
+		 public const ushort Queue2G_Enqueue = 20029;
 	}
 }
