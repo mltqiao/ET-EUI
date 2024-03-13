@@ -18,7 +18,7 @@ namespace ET
      			}
      			if( this.m_E_TapToStartButton == null )
      			{
-		    		this.m_E_TapToStartButton = UIFindHelper.FindDeepChild<UnityEngine.UI.Button>(this.uiTransform.gameObject,"Background/E_TapToStart");
+		    		this.m_E_TapToStartButton = UIFindHelper.FindDeepChild<UnityEngine.UI.Button>(this.uiTransform.gameObject,"TapToStart/E_TapToStart");
      			}
      			return this.m_E_TapToStartButton;
      		}
@@ -35,7 +35,7 @@ namespace ET
      			}
      			if( this.m_E_TapToStartImage == null )
      			{
-		    		this.m_E_TapToStartImage = UIFindHelper.FindDeepChild<UnityEngine.UI.Image>(this.uiTransform.gameObject,"Background/E_TapToStart");
+		    		this.m_E_TapToStartImage = UIFindHelper.FindDeepChild<UnityEngine.UI.Image>(this.uiTransform.gameObject,"TapToStart/E_TapToStart");
      			}
      			return this.m_E_TapToStartImage;
      		}

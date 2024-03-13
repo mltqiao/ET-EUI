@@ -306,29 +306,29 @@
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>D:\Program Files(x86)\Unity\2022.3.20f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="CommandLine">
-      <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Assets\Plugins\CommandLine.dll</HintPath>
-    </Reference>
-    <Reference Include="ICSharpCode.SharpZipLib">
-      <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Assets\Plugins\ICSharpCode.SharpZipLib.dll</HintPath>
-    </Reference>
     <Reference Include="DemiEditor">
       <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Assets\Plugins\Demigiant\DemiLib\Core\Editor\DemiEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween">
-      <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTweenPro">
-      <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Assets\Plugins\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
     </Reference>
     <Reference Include="DemiLib">
       <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Assets\Plugins\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
     </Reference>
+    <Reference Include="DOTweenEditor">
+      <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Assets\Plugins\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
+    </Reference>
     <Reference Include="DOTweenProEditor">
       <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Assets\Plugins\Demigiant\DOTweenPro\Editor\DOTweenProEditor.dll</HintPath>
     </Reference>
-    <Reference Include="DOTweenEditor">
-      <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Assets\Plugins\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
+    <Reference Include="DOTween">
+      <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="CommandLine">
+      <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Assets\Plugins\CommandLine.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenPro">
+      <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Assets\Plugins\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Assets\Plugins\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
@@ -714,11 +714,17 @@
     <Reference Include="UnityEngine.TestRunner">
       <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
       <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
       <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Runtime">
       <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>

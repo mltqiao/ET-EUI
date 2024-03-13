@@ -22,6 +22,8 @@
             unitComponent.Add(unit);
             
             zoneScene.RemoveComponent<AIComponent>();
+
+            await TimerComponent.Instance.WaitAsync(1000);
             
             Game.EventSystem.PublishAsync(new EventType.SceneChangeFinish() {ZoneScene = zoneScene, CurrentScene = currentScene}).Coroutine();
 

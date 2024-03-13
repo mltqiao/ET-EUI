@@ -303,20 +303,20 @@
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>D:\Program Files(x86)\Unity\2022.3.20f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
-    <Reference Include="CommandLine">
-      <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Assets\Plugins\CommandLine.dll</HintPath>
-    </Reference>
-    <Reference Include="ICSharpCode.SharpZipLib">
-      <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Assets\Plugins\ICSharpCode.SharpZipLib.dll</HintPath>
+    <Reference Include="DemiLib">
+      <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Assets\Plugins\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
       <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
     </Reference>
+    <Reference Include="CommandLine">
+      <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Assets\Plugins\CommandLine.dll</HintPath>
+    </Reference>
     <Reference Include="DOTweenPro">
       <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Assets\Plugins\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
     </Reference>
-    <Reference Include="DemiLib">
-      <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Assets\Plugins\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Assets\Plugins\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>D:\Program Files(x86)\Unity\2022.3.20f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\mscorlib.dll</HintPath>
@@ -693,11 +693,17 @@
     <Reference Include="System.Xml.XPath.XDocument">
       <HintPath>D:\Program Files(x86)\Unity\2022.3.20f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.XPath.XDocument.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
       <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
       <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Runtime">
       <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>

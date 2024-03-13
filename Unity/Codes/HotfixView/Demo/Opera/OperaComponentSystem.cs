@@ -26,7 +26,7 @@ namespace ET
     {
         public static void Update(this OperaComponent self)
         {
-            if (InputHelper.GetMouseButtonDown(1))
+            if (InputHelper.GetMouseButtonDown(0))
             {
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
