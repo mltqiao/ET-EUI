@@ -52,5 +52,8 @@ namespace ET
 		 public const ushort G2C_DeleteRole = 10049;
 		 public const ushort C2G_Enter2Map = 10050;
 		 public const ushort G2C_Enter2Map = 10051;
+		 public const ushort G2C_UpdateQueue = 10052;
+		 public const ushort C2G_CancelQueue = 10053;
+		 public const ushort G2C_CancelQueue = 10054;
 	}
 }

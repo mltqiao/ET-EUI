@@ -41,6 +41,33 @@ namespace ET
                     return;
                 }
 
+                if (gateUser.GetComponent<MultiLoginComponent>() != null)
+                {
+                    if (accountZoneDB.LastRoleId != unitId)
+                    {
+                        await gateUser.Offline(false);
+                    }
+                    
+                    gateUser.RemoveComponent<MultiLoginComponent>();
+
+                    if (gateUser.State == GateUserState.InQueue)
+                    {
+                        GateQueueComponent gateQueueComponent = gateUser.GetComponent<GateQueueComponent>();
+                        response.InQueue = true;
+                        response.Index = gateQueueComponent.Index;
+                        response.Count = gateQueueComponent.Count;
+                        reply();
+                        return;
+                    }
+
+                    if (gateUser.State == GateUserState.InMap)
+                    {
+                        reply();
+                        gateUser.EnterMap().Coroutine();
+                        return;
+                    }
+                }
+
                 RoleInfoDB targetRoleInfo = accountZoneDB.GetChild<RoleInfoDB>(unitId);
                 if (targetRoleInfo == null || targetRoleInfo.IsDeleted)
                 {
@@ -92,6 +119,7 @@ namespace ET
                 {
                     Log.Console($"-> 测试 账号{account} 免排队直接进入游戏");
                     //游戏角色进入Map场景服务器
+                    gateUser.EnterMap().Coroutine();
                 }
             }
 

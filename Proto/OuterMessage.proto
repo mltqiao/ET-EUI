@@ -72,6 +72,7 @@ message UnitInfo
 	repeated int32 Ks = 10;
 	repeated int64 Vs = 11;
 	MoveInfo MoveInfo = 12;
+	string Name = 13;
 }
 
 message M2C_CreateUnits // IActorMessage
@@ -396,4 +397,25 @@ message G2C_Enter2Map // IResponse
 	bool InQueue = 1; //是否需要排队
 	int32 Count = 2; //排队总人数
 	int32 Index = 3; //排到第几位
+}
+
+message G2C_UpdateQueue // IMessage
+{
+	int32 Index = 1;
+	int32 Count = 2;
+}
+
+//ResponseType G2C_CancelQueue
+message C2G_CancelQueue // IRequest
+{
+	int32 RpcId = 90;
+	
+	int64 UnitId = 1;
+}
+
+message G2C_CancelQueue // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
 }

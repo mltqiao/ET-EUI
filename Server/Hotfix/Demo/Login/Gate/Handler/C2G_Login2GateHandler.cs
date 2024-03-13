@@ -47,6 +47,7 @@ namespace ET
                         gateUser = gateUserMgrComponent.Creat(list[0]);
                     }
 
+                    
                     long id = gateUser.GetComponent<AccountZoneDB>().Id;
                     List<RoleInfoDB> listRole = await db.Query<RoleInfoDB>(d => d.AccountZoneId == id && !d.IsDeleted);
                     if (listRole.Count > 0)

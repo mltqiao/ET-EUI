@@ -442,4 +442,96 @@ namespace ET
 
 	}
 
+	[ResponseType(nameof(G2Queue_EnterMap))]
+	[Message(InnerOpcode.Queue2G_EnterMap)]
+	[ProtoContract]
+	public partial class Queue2G_EnterMap: Object, IActorRequest
+	{
+		[ProtoMember(90)]
+		public int RpcId { get; set; }
+
+		[ProtoMember(1)]
+		public string Account { get; set; }
+
+		[ProtoMember(2)]
+		public long UnitId { get; set; }
+
+	}
+
+	[Message(InnerOpcode.G2Queue_EnterMap)]
+	[ProtoContract]
+	public partial class G2Queue_EnterMap: Object, IActorResponse
+	{
+		[ProtoMember(90)]
+		public int RpcId { get; set; }
+
+		[ProtoMember(91)]
+		public int Error { get; set; }
+
+		[ProtoMember(92)]
+		public string Message { get; set; }
+
+		[ProtoMember(1)]
+		public bool NeedRemove { get; set; }
+
+	}
+
+	[Message(InnerOpcode.Queue2G_UpdateInfo)]
+	[ProtoContract]
+	public partial class Queue2G_UpdateInfo: Object, IActorMessage
+	{
+		[ProtoMember(90)]
+		public int RpcId { get; set; }
+
+		[ProtoMember(1)]
+		public List<string> Account = new List<string>();
+
+		[ProtoMember(2)]
+		public List<int> Index = new List<int>();
+
+		[ProtoMember(3)]
+		public int Count { get; set; }
+
+	}
+
+	[Message(InnerOpcode.G2Queue_Disconnect)]
+	[ProtoContract]
+	public partial class G2Queue_Disconnect: Object, IActorMessage
+	{
+		[ProtoMember(90)]
+		public int RpcId { get; set; }
+
+		[ProtoMember(1)]
+		public long UnitId { get; set; }
+
+		[ProtoMember(2)]
+		public bool Protect { get; set; }
+
+	}
+
+	[ResponseType(nameof(M2G_SecondLogin))]
+	[Message(InnerOpcode.G2M_SecondLogin)]
+	[ProtoContract]
+	public partial class G2M_SecondLogin: Object, IActorLocationRequest
+	{
+		[ProtoMember(90)]
+		public int RpcId { get; set; }
+
+	}
+
+	[Message(InnerOpcode.M2G_SecondLogin)]
+	[ProtoContract]
+	public partial class M2G_SecondLogin: Object, IActorLocationResponse
+	{
+		[ProtoMember(90)]
+		public int RpcId { get; set; }
+
+		[ProtoMember(91)]
+		public int Error { get; set; }
+
+		[ProtoMember(92)]
+		public string Message { get; set; }
+
+	}
+
 }

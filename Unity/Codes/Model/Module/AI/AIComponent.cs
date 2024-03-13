@@ -10,6 +10,6 @@ namespace ET
 
         public long Timer;
 
-        public int Current;
+        public int Current; 
     }
 }
