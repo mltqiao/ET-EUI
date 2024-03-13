@@ -24,7 +24,7 @@ namespace ET
 		public static void OnCloseButtonClickHandler(this DlgTest self)
 		{
 			//self.ZoneScene().GetComponent<UIComponent>().HideWindow(WindowID.WindowID_Test);
-			self.ZoneScene().GetComponent<UIComponent>().CloseWindow(WindowID.WindowID_Test);
+			self.DomainScene().GetComponent<UIComponent>().CloseWindow(WindowID.WindowID_Test);
 		}
 
 	}

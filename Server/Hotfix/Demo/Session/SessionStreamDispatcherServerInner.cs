@@ -33,10 +33,21 @@ namespace ET
                         Log.Error($"not found actor: {session.DomainScene().Name}  {opcode} {realActorId} {message}");
                         return;
                     }
-                    
-                    if (entity is Session gateSession)
+
+                    if (entity is GateUser gateUser)
                     {
-                        // 发送给客户端
+                        Session gateSession = gateUser.Session;
+
+                        if (gateSession == null)
+                        {
+                            return;
+                        }
+
+                        if (gateUser.GetComponent<MultiLoginComponent>() != null)
+                        {
+                            return;
+                        }
+
                         memoryStream.Seek(Packet.OpcodeIndex, SeekOrigin.Begin);
                         gateSession.Send(0, memoryStream);
                         return;

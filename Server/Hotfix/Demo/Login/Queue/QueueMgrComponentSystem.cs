@@ -7,7 +7,7 @@
             // 启动放人计时器
             self.Timer_Tick = TimerComponent.Instance.NewRepeatedTimer(ConstValue.Queue_TickTime, TimerType.QueueTickTime, self);
             // 启动清空掉线保护时长计时器
-            self.Timer_ClearProtect = TimerComponent.Instance.NewRepeatedTimer(ConstValue.Queue_ProtectTime, TimerType.QueueClearProtect, self);
+            self.Timer_ClearProtect = TimerComponent.Instance.NewRepeatedTimer(ConstValue.Queue_ClearProtect, TimerType.QueueClearProtect, self);
             // 启动排队排名更新计时器
             self.Timer_Update = TimerComponent.Instance.NewRepeatedTimer(ConstValue.Queue_TickUpdate, TimerType.QueueUpdateTime, self);
         }

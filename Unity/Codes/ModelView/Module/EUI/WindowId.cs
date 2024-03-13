@@ -15,5 +15,6 @@ namespace ET
 		WindowID_CharactorSelect, //选择角色界面
 		WindowID_CreateCharactor, //创建角色界面
 		WindowID_Queue, //排队界面
+		WindowID_SceneLoading, //场景加载界面
 	}
 }

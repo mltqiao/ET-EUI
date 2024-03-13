@@ -7,22 +7,11 @@ namespace ET
         protected override  void Run(EventType.AfterCreateZoneScene args)
         {
             Scene zoneScene = args.ZoneScene;
-            zoneScene.AddComponent<UIComponent>();
+            UIComponent uiComponent = zoneScene.AddComponent<UIComponent>();
             zoneScene.AddComponent<UIPathComponent>();
             zoneScene.AddComponent<UIEventComponent>();
             zoneScene.AddComponent<RedDotComponent>();
             zoneScene.AddComponent<ResourcesLoaderComponent>();
-        
-            
-            //zoneScene.GetComponent<UIComponent>().ShowWindow(WindowID.WindowID_Test);
-            UIComponent uiComponent = zoneScene.GetComponent<UIComponent>();
-            uiComponent.ShowWindow(WindowID.WindowID_AccountLogin);
-
-            zoneScene.AddComponent<CarsComponent>();
-
-            // Log.Debug("Before Test");
-            // Test(zoneScene).Coroutine();
-            // Log.Debug("After Test");
         }
 
         public async ETTask Test(Scene zoneScene)

@@ -9,6 +9,8 @@ namespace ET
         
         private async ETTask RunAsync(EventType.SceneChangeStart args)
         {
+            args.ZoneScene.GetComponent<UIComponent>().ShowWindow(WindowID.WindowID_SceneLoading);
+            
             Scene currentScene = args.ZoneScene.CurrentScene();
             
             // 加载场景资源

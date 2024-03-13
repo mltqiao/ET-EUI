@@ -36,8 +36,8 @@ namespace ET
 					return;
 				}
 				
-				self.ZoneScene().GetComponent<UIComponent>().HideWindow(WindowID.WindowID_CreateCharactor);
-				self.ZoneScene().GetComponent<UIComponent>().ShowWindow(WindowID.WindowID_CharactorSelect);
+				self.DomainScene().GetComponent<UIComponent>().HideWindow(WindowID.WindowID_CreateCharactor);
+				self.DomainScene().GetComponent<UIComponent>().ShowWindow(WindowID.WindowID_CharactorSelect);
 			}
 			catch (Exception e)
 			{

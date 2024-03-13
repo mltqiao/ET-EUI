@@ -9,5 +9,7 @@
         public const int ActorMessageSenderChecker = 3;
 
         // 不能超过1000
+
+        public const int SceneLoading = 4;
     }
 }

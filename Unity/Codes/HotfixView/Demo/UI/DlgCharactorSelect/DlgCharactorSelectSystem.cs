@@ -62,8 +62,8 @@ namespace ET
 
         public static void OnAddRoleClickHandler(this DlgCharactorSelect self)
         {
-            self.ZoneScene().GetComponent<UIComponent>().HideWindow(WindowID.WindowID_CharactorSelect);
-            self.ZoneScene().GetComponent<UIComponent>().ShowWindow(WindowID.WindowID_CreateCharactor);
+            self.DomainScene().GetComponent<UIComponent>().HideWindow(WindowID.WindowID_CharactorSelect);
+            self.DomainScene().GetComponent<UIComponent>().ShowWindow(WindowID.WindowID_CreateCharactor);
         }
 
         public static async ETTask OnDeleteRoleClickHandler(this DlgCharactorSelect self, long roleId)
