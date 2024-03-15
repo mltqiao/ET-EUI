@@ -693,9 +693,6 @@
     <Reference Include="System.Xml.XPath.XDocument">
       <HintPath>D:\Program Files(x86)\Unity\2022.3.20f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.XPath.XDocument.dll</HintPath>
     </Reference>
-    <Reference Include="Cinemachine">
-      <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
       <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
     </Reference>
@@ -779,6 +776,9 @@
     </Reference>
     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
       <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Editor">
       <HintPath>D:\Program Files(x86)\Projects\ET-EUI\Unity\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
