@@ -44,7 +44,7 @@ namespace ET
             }
         }
 
-        public static void Remove(this AOIManagerComponent self, AOIEntity aoiEntity)
+        public static void Remove(this AOIManagerComponent self, AOIEntity aoiEntity) 
         {
             if (aoiEntity.Cell == null)
             {

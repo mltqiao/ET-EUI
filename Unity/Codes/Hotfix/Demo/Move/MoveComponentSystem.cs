@@ -275,6 +275,12 @@ namespace ET
             return true;
         }
 
+        public static void StopForce(this MoveComponent self)
+        {
+            self.Clear();
+            Game.EventSystem.Publish(new EventType.MoveStop() { Unit = self.GetParent<Unit>()});
+        }
+
         public static void Stop(this MoveComponent self)
         {
             if (self.Targets.Count > 0)

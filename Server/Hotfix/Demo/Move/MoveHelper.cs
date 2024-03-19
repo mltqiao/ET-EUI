@@ -22,7 +22,7 @@ namespace ET
             List<Vector3> path = list;
             if (path.Count < 2)
             {
-                unit.SendStop(0);
+                unit.SendStop(-1);
                 return;
             }
                 

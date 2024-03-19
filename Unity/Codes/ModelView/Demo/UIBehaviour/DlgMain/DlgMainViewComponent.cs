@@ -7,7 +7,7 @@ namespace ET
 	[EnableMethod]
 	public  class DlgMainViewComponent : Entity,IAwake,IDestroy 
 	{
-		public UnityEngine.RectTransform EG_TotalBGRectTransform
+		public UnityEngine.EventSystems.EventTrigger E_JoyStickBgEventTrigger
      	{
      		get
      		{
@@ -16,15 +16,15 @@ namespace ET
      				Log.Error("uiTransform is null.");
      				return null;
      			}
-     			if( this.m_EG_TotalBGRectTransform == null )
+     			if( this.m_E_JoyStickBgEventTrigger == null )
      			{
-		    		this.m_EG_TotalBGRectTransform = UIFindHelper.FindDeepChild<UnityEngine.RectTransform>(this.uiTransform.gameObject,"EG_TotalBG");
+		    		this.m_E_JoyStickBgEventTrigger = UIFindHelper.FindDeepChild<UnityEngine.EventSystems.EventTrigger>(this.uiTransform.gameObject,"E_TotalBG/E_JoyStickBg");
      			}
-     			return this.m_EG_TotalBGRectTransform;
+     			return this.m_E_JoyStickBgEventTrigger;
      		}
      	}
 
-		public UnityEngine.RectTransform EG_JoyStickRectTransform
+		public UnityEngine.UI.Image E_JoyStickCenterImage
      	{
      		get
      		{
@@ -33,28 +33,11 @@ namespace ET
      				Log.Error("uiTransform is null.");
      				return null;
      			}
-     			if( this.m_EG_JoyStickRectTransform == null )
+     			if( this.m_E_JoyStickCenterImage == null )
      			{
-		    		this.m_EG_JoyStickRectTransform = UIFindHelper.FindDeepChild<UnityEngine.RectTransform>(this.uiTransform.gameObject,"EG_TotalBG/EG_JoyStick");
+		    		this.m_E_JoyStickCenterImage = UIFindHelper.FindDeepChild<UnityEngine.UI.Image>(this.uiTransform.gameObject,"E_TotalBG/E_JoyStickBg/E_JoyStickCenter");
      			}
-     			return this.m_EG_JoyStickRectTransform;
-     		}
-     	}
-
-		public UnityEngine.UI.Image E_JoyStickImage
-     	{
-     		get
-     		{
-     			if (this.uiTransform == null)
-     			{
-     				Log.Error("uiTransform is null.");
-     				return null;
-     			}
-     			if( this.m_E_JoyStickImage == null )
-     			{
-		    		this.m_E_JoyStickImage = UIFindHelper.FindDeepChild<UnityEngine.UI.Image>(this.uiTransform.gameObject,"EG_TotalBG/EG_JoyStick/E_JoyStick");
-     			}
-     			return this.m_E_JoyStickImage;
+     			return this.m_E_JoyStickCenterImage;
      		}
      	}
 
@@ -69,7 +52,7 @@ namespace ET
      			}
      			if( this.m_E_Play3Image == null )
      			{
-		    		this.m_E_Play3Image = UIFindHelper.FindDeepChild<UnityEngine.UI.Image>(this.uiTransform.gameObject,"EG_TotalBG/Player_Joystick_Right/E_Play3");
+		    		this.m_E_Play3Image = UIFindHelper.FindDeepChild<UnityEngine.UI.Image>(this.uiTransform.gameObject,"E_TotalBG/Player_Joystick_Right/E_Play3");
      			}
      			return this.m_E_Play3Image;
      		}
@@ -86,7 +69,7 @@ namespace ET
      			}
      			if( this.m_E_Play2Button == null )
      			{
-		    		this.m_E_Play2Button = UIFindHelper.FindDeepChild<UnityEngine.UI.Button>(this.uiTransform.gameObject,"EG_TotalBG/Player_Joystick_Right/E_Play2");
+		    		this.m_E_Play2Button = UIFindHelper.FindDeepChild<UnityEngine.UI.Button>(this.uiTransform.gameObject,"E_TotalBG/Player_Joystick_Right/E_Play2");
      			}
      			return this.m_E_Play2Button;
      		}
@@ -103,7 +86,7 @@ namespace ET
      			}
      			if( this.m_E_Play2Image == null )
      			{
-		    		this.m_E_Play2Image = UIFindHelper.FindDeepChild<UnityEngine.UI.Image>(this.uiTransform.gameObject,"EG_TotalBG/Player_Joystick_Right/E_Play2");
+		    		this.m_E_Play2Image = UIFindHelper.FindDeepChild<UnityEngine.UI.Image>(this.uiTransform.gameObject,"E_TotalBG/Player_Joystick_Right/E_Play2");
      			}
      			return this.m_E_Play2Image;
      		}
@@ -120,7 +103,7 @@ namespace ET
      			}
      			if( this.m_E_Play1Button == null )
      			{
-		    		this.m_E_Play1Button = UIFindHelper.FindDeepChild<UnityEngine.UI.Button>(this.uiTransform.gameObject,"EG_TotalBG/Player_Joystick_Right/E_Play1");
+		    		this.m_E_Play1Button = UIFindHelper.FindDeepChild<UnityEngine.UI.Button>(this.uiTransform.gameObject,"E_TotalBG/Player_Joystick_Right/E_Play1");
      			}
      			return this.m_E_Play1Button;
      		}
@@ -137,7 +120,7 @@ namespace ET
      			}
      			if( this.m_E_Play1Image == null )
      			{
-		    		this.m_E_Play1Image = UIFindHelper.FindDeepChild<UnityEngine.UI.Image>(this.uiTransform.gameObject,"EG_TotalBG/Player_Joystick_Right/E_Play1");
+		    		this.m_E_Play1Image = UIFindHelper.FindDeepChild<UnityEngine.UI.Image>(this.uiTransform.gameObject,"E_TotalBG/Player_Joystick_Right/E_Play1");
      			}
      			return this.m_E_Play1Image;
      		}
@@ -154,7 +137,7 @@ namespace ET
      			}
      			if( this.m_E_Play0Button == null )
      			{
-		    		this.m_E_Play0Button = UIFindHelper.FindDeepChild<UnityEngine.UI.Button>(this.uiTransform.gameObject,"EG_TotalBG/Player_Joystick_Right/E_Play0");
+		    		this.m_E_Play0Button = UIFindHelper.FindDeepChild<UnityEngine.UI.Button>(this.uiTransform.gameObject,"E_TotalBG/Player_Joystick_Right/E_Play0");
      			}
      			return this.m_E_Play0Button;
      		}
@@ -171,7 +154,7 @@ namespace ET
      			}
      			if( this.m_E_Play0Image == null )
      			{
-		    		this.m_E_Play0Image = UIFindHelper.FindDeepChild<UnityEngine.UI.Image>(this.uiTransform.gameObject,"EG_TotalBG/Player_Joystick_Right/E_Play0");
+		    		this.m_E_Play0Image = UIFindHelper.FindDeepChild<UnityEngine.UI.Image>(this.uiTransform.gameObject,"E_TotalBG/Player_Joystick_Right/E_Play0");
      			}
      			return this.m_E_Play0Image;
      		}
@@ -179,9 +162,8 @@ namespace ET
 
 		public void DestroyWidget()
 		{
-			this.m_EG_TotalBGRectTransform = null;
-			this.m_EG_JoyStickRectTransform = null;
-			this.m_E_JoyStickImage = null;
+			this.m_E_JoyStickBgEventTrigger = null;
+			this.m_E_JoyStickCenterImage = null;
 			this.m_E_Play3Image = null;
 			this.m_E_Play2Button = null;
 			this.m_E_Play2Image = null;
@@ -192,9 +174,8 @@ namespace ET
 			this.uiTransform = null;
 		}
 
-		private UnityEngine.RectTransform m_EG_TotalBGRectTransform = null;
-		private UnityEngine.RectTransform m_EG_JoyStickRectTransform = null;
-		private UnityEngine.UI.Image m_E_JoyStickImage = null;
+		private UnityEngine.EventSystems.EventTrigger m_E_JoyStickBgEventTrigger = null;
+		private UnityEngine.UI.Image m_E_JoyStickCenterImage = null;
 		private UnityEngine.UI.Image m_E_Play3Image = null;
 		private UnityEngine.UI.Button m_E_Play2Button = null;
 		private UnityEngine.UI.Image m_E_Play2Image = null;

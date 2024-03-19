@@ -20,6 +20,7 @@
             M2C_CreateMyUnit m2CCreateMyUnit = waitCreateMyUnit.Message;
             Unit unit = UnitFactory.Create(currentScene, m2CCreateMyUnit.Unit);
             unitComponent.Add(unit);
+            unitComponent.MyUnit = unit;
             
             zoneScene.RemoveComponent<AIComponent>();
 

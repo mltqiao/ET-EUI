@@ -292,6 +292,33 @@ namespace ET
 
 	}
 
+	[Message(OuterOpcode.C2M_JoyStop)]
+	[ProtoContract]
+	public partial class C2M_JoyStop: Object, IActorLocationMessage
+	{
+		[ProtoMember(90)]
+		public int RpcId { get; set; }
+
+		[ProtoMember(1)]
+		public float X { get; set; }
+
+		[ProtoMember(2)]
+		public float Y { get; set; }
+
+		[ProtoMember(3)]
+		public float Z { get; set; }
+
+		[ProtoMember(4)]
+		public float A { get; set; }
+
+		[ProtoMember(5)]
+		public float B { get; set; }
+
+		[ProtoMember(6)]
+		public float C { get; set; }
+
+	}
+
 	[ResponseType(nameof(G2C_Ping))]
 	[Message(OuterOpcode.C2G_Ping)]
 	[ProtoContract]
