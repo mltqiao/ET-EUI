@@ -12,7 +12,7 @@ namespace ET
         
         public static void MoveNext(this XunLuoPathComponent self)
         {
-            self.Index = ++self.Index % self.path.Length;
+            self.Index = ++self.Index % self.path.Count;
         }
     }
 }

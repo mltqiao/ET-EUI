@@ -11,8 +11,17 @@ namespace ET
             try
             {
                 zoneScene = SceneFactory.CreateZoneScene(zone, "Robot", self);
-                await LoginHelper.Login(zoneScene, ConstValue.LoginAddress, zone.ToString(), zone.ToString());
-                await EnterMapHelper.EnterMapAsync(zoneScene);
+                // await LoginHelper.Login(zoneScene, ConstValue.LoginAddress, zone.ToString(), zone.ToString());
+                // await EnterMapHelper.EnterMapAsync(zoneScene);
+
+                int errorCode = await RobotLoginHelper.Login(zoneScene, zone.ToString(), zone.ToString());
+                if (errorCode != ErrorCode.ERR_Success)
+                {
+                    zoneScene?.Dispose();
+                    Log.Error($"create robot fail, zone {zone}");
+                    return null;
+                }
+                
                 Log.Debug($"create robot ok: {zone}");
                 return zoneScene;
             }
